@@ -9,7 +9,6 @@
     <title>Form Page</title>
 </head>
 <body>
-    This is the fuckin FORM PAGE!!
     <div class='container'>
         <div class='jumbotron'>
             <h1>Fill out this Form for ENCRYPTION</h1><br><br>
@@ -17,8 +16,9 @@
                 {{form_dic1.as_p}}
                 {% csrf_token %}
                 <input type="submit" class=' btn btn-primary' value='Hit Me'>
-                Value of x is {{x}} and your Key is {{y}}
+               <h4>Encrypted Text is </h4> <h3>{{x}} </h3><h4>and your Key is </h4><h3>{{y}}</h3>
             </form>
+            Go to /dec for the decryption page!
         </div>
     </div>
 

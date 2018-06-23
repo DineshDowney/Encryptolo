@@ -9,10 +9,10 @@ def index(request):
 
 def FormFun(request):
     FormObj = forms.FormClass()
-
+    x=""
+    y="_____"
     if request.method=='POST':
         FormObj=forms.FormClass(request.POST)
-        x="_____"
         if FormObj.is_valid():
             FormObj.cleaned_data['name']
             para_1=FormObj.cleaned_data['text']
@@ -24,7 +24,7 @@ def FormFun(request):
 
 def FormFun2(request):
     FormObj2=forms.FormClass2()
-    x="_____"
+    x=""
     if request.method=='POST':
         FormObj2=forms.FormClass2(request.POST)
         

@@ -18,8 +18,8 @@ from django.urls import path
 from django.conf.urls import url,include
 from encryptolo import views
 urlpatterns = [
-    #url(r'^$',views.index,name="index"),
-    url(r'^$',views.FormFun,name="Form"),
-    path('admin/', admin.site.urls),
+    url(r'^$',views.index,name="index"),
+    url(r'^enc',views.FormFun,name="Form"),
+    #path('admin/', admin.site.urls),
     url(r'^dec/',views.FormFun2,name="Form2"),
 ]

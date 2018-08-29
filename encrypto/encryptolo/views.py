@@ -10,7 +10,7 @@ from email import encoders
 
 # Create your views here.
 def index(request):
-    return render(request,"index.html")
+    return render(request,"index1.html")
 
 def sendmail(receiver, key,x):
     fromaddr = "akshaykumar.90447@gmail.com"
@@ -20,7 +20,7 @@ def sendmail(receiver, key,x):
 
     msg['From'] = fromaddr
     msg['To'] = toaddr
-    msg['Subject'] = "Images"
+    msg['Subject'] = "Your Key and Text"
 
     body = "Encrypted Text is: \n\n" + x + "\n\n\nand your Key is \n\n" + key
 

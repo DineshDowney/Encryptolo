@@ -13,7 +13,7 @@ def index(request):
     return render(request,"index1.html")
 
 def sendmail(receiver, key,x):
-    fromaddr = "akshaykumar.90447@gmail.com"
+    fromaddr = "techyswami@gmail.com"
     toaddr = receiver
 
     msg = MIMEMultipart()
@@ -28,7 +28,7 @@ def sendmail(receiver, key,x):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "786@piplani")
+    server.login(fromaddr, "not@safe")
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()

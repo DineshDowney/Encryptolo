@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <title>Form Page</title>
-</head>
-<body>
-    <div class='container'>
-        <div class='jumbotron'>
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
             <h1>Fill out this Form for ENCRYPTION</h1><br><br>
-            <form method='POST'>
+            <form method='POST' align='center'>
                 {{form_dic1.as_p}}
                 {% csrf_token %}
                 <input type="submit" class=' btn btn-primary' value='Hit Me'>
-               <h4>Encrypted Text is </h4> <h3>{{x}} </h3><h4>and your Key is </h4><h3>{{y}}</h3>
+               <h4>Encrypted Text is </h4> <h3>{{x}} </h3>
+               <br>
+               <h4>and your Key is </h4><h3>{{y}}</h3>
             </form>
-            Go to /dec for the decryption page!
-        </div>
-    </div>
-
-</body>
-</html>
+            Click <a href="/dec">here</a> for the decryption page!
+{% endblock%}

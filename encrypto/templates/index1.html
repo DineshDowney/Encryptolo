@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
-</head>
-<body>
-    Go to /enc for the Encryption Page and /Dec for the Decryption Page
-</body>
-</html>
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+                <h3>It uses cryptography library to Encrypt a user given string. Which can be decrypted later on with the Key which will be generated each session.
+
+                User will have to input his E-mail Address to receive the Key and the Encrypted Text for future Decryption.</h3>
+                <h1><a href="/enc" class="font-weight-bold">Encryption</a></h1> 
+                <br>
+                <h1><a href="/dec" class="font-weight-bold">Decryption</a></h1>
+{% endblock%}

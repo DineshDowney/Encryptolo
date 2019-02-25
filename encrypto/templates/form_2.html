@@ -1,8 +1,17 @@
 {% extends "base.html" %}
 {%load static%}
 {% block content %}
-            <h1>Fill out this Form for DECRYPTION</h1><br><br>
-            <form method='POST'>
+{%include 'includes/_formclass.html'%}
+<style>
+    h4,
+    h1 {
+        font-family: 'Changa', sans-serif;
+        font-size: 25px;
+        font: bolder;
+    }
+</style>
+<h1>Decrypt Text</h1>
+         <form method='POST' align='center' class="form-style-1">
                 {{form_dic2.as_p}}
                 {% csrf_token %}
                 <input type="submit" class=' btn btn-primary' value='Hit Me' onclick="document.getElementById('para').textContent='Decrypted TEXT is {{x}}';">

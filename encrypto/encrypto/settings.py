@@ -9,7 +9,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,"templates")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'SECRET_KEY'
-DEBUG = False
+DEBUG = True
 DATABASES = {'DATABASE_URL'}
 ALLOWED_HOSTS = ['*']
 

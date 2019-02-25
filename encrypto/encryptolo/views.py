@@ -10,10 +10,10 @@ from email import encoders
 
 # Create your views here.
 def index(request):
-    return render(request,"index1.html")
+    return render(request,"index.html")
 
 def sendmail(receiver, key,x):
-    fromaddr = "techyswami@gmail.com"
+    fromaddr = "xoxo@dineshgarg.co"
     toaddr = receiver
 
     msg = MIMEMultipart()
@@ -28,7 +28,7 @@ def sendmail(receiver, key,x):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "not@safe")
+    server.login(fromaddr, "nososmart")
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()

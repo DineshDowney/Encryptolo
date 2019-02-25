@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 {%load static%}
 {% block content %}
-            <h1>Fill out this Form for ENCRYPTION</h1><br><br>
-            <form method='POST' align='center'>
-                {{form_dic1.as_p}}
-                {% csrf_token %}
-                <input type="submit" class=' btn btn-primary' value='Hit Me'>
-               <h4>Encrypted Text is </h4> <h3>{{x}} </h3>
-               <br>
-               <h4>and your Key is </h4><h3>{{y}}</h3>
-            </form>
-            Click <a href="/dec">here</a> for the decryption page!
+{%include 'includes/_formclass.html'%}
+<style>
+    h4,h1{
+        font-family: 'Changa', sans-serif;font-size: 25px;
+        font:bolder;
+    }
+</style>
+<h1>Encrypt Text</h1>
+<form  method='POST' align='center' class="form-style-1">
+    {{form_dic1.as_p}}
+    {% csrf_token %}
+    <input type="submit" class=' btn btn-primary' value='Submit' />
+</form>
+
+<h4 >Encrypted Text is </h4>
+<h3>{{x}} </h3>
+<br>
+<h4>and your Key is </h4>
+<h3>{{y}}</h3>
+
+<h1>Click <a href="/dec">here</a> for the decryption page!</h1>
 {% endblock%}

@@ -9,7 +9,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,"templates")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'SECRET_KEY'
-DEBUG = False
+DEBUG = True
 DATABASES = {'DATABASE_URL'}
 ALLOWED_HOSTS = ['*']
 
@@ -17,6 +17,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    #'whitenoise.runserver_nostatic',
     'encryptolo',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
